@@ -8,9 +8,21 @@ import { BsBookmarkPlus } from "react-icons/bs";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className="fixed  lg:top-0 lg:left-0  bottom-0 left-0 right-0 h-10 lg:h-full   z-50 lg:flex group p-3 ">
+    <div 
+    className="
+    fixed
+    bottom-0 left-0 right-0
+    lg:top-0 lg:left-0 lg:right-auto
+    lg:h-full
+    lg:w-[60px]
+    z-50
+    lg:flex
+    group
+  "
+    
+    >
       <div
-        className="flex  lg:flex-col flex-row lg:gap-11.25 gap-8 lg:fixed lg:top-0  lg:h-full h-10 z-100 lg:pl-6  lg:text-[25px] text-[25px] text-white lg:w-25 w-full hover:w-40 
+        className="flex  lg:flex-col flex-row lg:gap-11.25 lg:gap-x-0 gap-x-8 lg:fixed lg:top-0  lg:h-full h-full z-100 lg:pl-6 lg:px-0 px-2.5 lg:text-[25px] text-[30px] lg-pt-0 pt-2 text-white lg:w-25 w-full lg:hover:w-40 
                 bg-linear-to-r from-[#161719] to-transparent justify-between lg:justify-center transition-[width] duration-500"
       >
         <TiHome onClick={() => navigate("/")} className="cursor-pointer" />
@@ -32,7 +44,7 @@ const Navbar = () => {
         />
       </div>
       <div
-        className="flex items-center ml-16 opacity-0 w-40 translate-x-[-80px]   group-hover:opacity-100 group-hover:translate-x-0
+        className="flex  items-center ml-16 opacity-0 lg:w-40 w-full translate-x-[-80px]   lg:group-hover:opacity-100 lg:group-hover:translate-x-0
         transition-all duration-900 "
       >
         <ul className="text-white flex flex-col gap-11.25 text-[16px] cursor-pointer transform transition-all duration-300 hover:scale-110 ">
