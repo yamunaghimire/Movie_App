@@ -35,6 +35,15 @@ getMoviesByCategory: async (category, page = 1) => {
     return data;
   },
 
+
+//   getDetails: async (id, mediaType = "movie") => {
+//   const res = await fetch(
+//     `${BASE_URL}/${mediaType}/${id}?api_key=${API_KEY}&language=en-US`
+//   );
+//   const data = await res.json();
+//   return data;
+// },
+
   getCompanies : async () => {
   const ids = [420, 2, 3, 33, 1, 4]; 
   const promises = ids.map(async (id) => {
@@ -68,13 +77,46 @@ getMovieVideos: async(id)=>
     return res.json();
 },
   
-getUpcomingMovies: async()=>
+
+getSimilarMovies : async(id)=>
 {
-   const res = await fetch( `${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`);
+    const res = await fetch( `${BASE_URL}/movie/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`);
    if(!res.ok) throw new Error("Failed to load movies videos")
     return res.json();
 
-}
+},
+
+getMoviesByGenre: async (genreId, page = 1) => {
+  const res = await fetch(
+    `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}&page=${page}`
+  );
+  return res.json();
+},
+getTVShowsByGenre: async (genreId, page = 1) => {
+  const res = await fetch(
+    `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=${genreId}&page=${page}`
+  );
+  return res.json();
+},
+
+getTrendingAll: async (timeWindow = "day", page = 1) => {
+  const res = await fetch(
+    `${BASE_URL}/trending/all/${timeWindow}?api_key=${API_KEY}&page=${page}`
+  );
+  return await res.json();
+},
+
+searchMulti: async (query, page = 1) => {
+  if (!query) return { results: [] };
+
+  const res = await fetch(
+    `${BASE_URL}/search/multi?api_key=${API_KEY}&query=${encodeURIComponent(
+      query
+    )}&page=${page}&language=en-US`
+  );
+
+  return await res.json();
+},
 
 
 

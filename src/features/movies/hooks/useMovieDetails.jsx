@@ -17,3 +17,6 @@ const useMovieDetails = (movieId)=>{
 };
 
 export default useMovieDetails;
+
+
+
