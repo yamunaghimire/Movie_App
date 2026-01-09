@@ -4,7 +4,7 @@ import MovieRow from "./MovieRow"
 const SimilarMovies = ({id}) => {
     const similarMovies = useSimilarMovies(id);
   return (
-    <div className="p-3">
+    <div className="lg:p-3 ">
         <MovieRow title="More Like this" movies={similarMovies}/>
         
     </div>

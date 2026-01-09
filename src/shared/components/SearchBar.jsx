@@ -9,7 +9,7 @@ const SearchBar = ({query, handleChange}) => {
         <input
           type="text"
           placeholder="Search for a movie, tv show...."
-          className=" p-5 bg-[rgb(38_40_51)] rounded-[10px] w-full text-white text-[18px] outline-none"
+          className=" lg:p-5 p-4 bg-[rgb(38_40_51)] rounded-[10px] w-full text-white text-[18px] outline-none"
           onChange={handleChange}
           value={query}
           
@@ -17,7 +17,7 @@ const SearchBar = ({query, handleChange}) => {
         
         <button
           type="button"
-           className="text-4xl absolute bottom-4.5 right-4 "
+           className="lg:text-4xl text-3xl absolute lg:bottom-4.5 bottom-3.5 right-4 "
         >
           <IoIosSearch  />
         </button>

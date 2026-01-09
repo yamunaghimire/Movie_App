@@ -51,10 +51,10 @@ export default function Hero() {
 
                 {/* bottom gradient  */}
                 <div
-                  className="pointer-events-none absolute inset-x-0 bottom-0 lg:h-46 h-30
+                  className="pointer-events-none absolute inset-x-0 bottom-0 lg:h-[46vh] h-[30vh]
                   bg-gradient-to-t from-black via-black/80 to-transparent"
                 />
-                <div className="absolute lg:bottom-75 bottom-30 lg:left-30  flex lg:items-start items-center justify-center  ">
+                <div className="absolute lg:bottom-[375px] bottom-[95px] lg:left-30 left-0 right-0 px-4 lg:px-0 w-full lg:w-auto flex lg:items-start items-center justify-center lg:justify-start">
                   <MovieDetails movieId={movie.id} isHero />
                 </div>
                 <div className="w-full hidden lg:block lg:absolute lg:bottom-4" >

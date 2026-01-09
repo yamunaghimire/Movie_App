@@ -11,7 +11,7 @@ const SearchPage = () => {
   };
 
   return (
-    <div className="px-35 pt-6">
+    <div className="lg:px-35 px-3 pt-6">
       <SearchBar query={query} handleChange={handleChange} />
 
       

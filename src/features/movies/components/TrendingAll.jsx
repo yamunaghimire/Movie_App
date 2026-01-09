@@ -48,8 +48,8 @@ const TrendingAll = () => {
 
   return (
     <>
-      <h1 className="text-white text-2xl pt-7 pb-6 font-medium pl-2">Trending Now</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <h1 className="text-white lg:text-2xl text-[20px] pt-7 pb-6 font-medium pl-2">Trending Now</h1>
+      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {filteredTrending.map(item => (
           <MovieCard key={`${item.media_type}-${item.id}`} movie={item} />
         ))}
