@@ -23,7 +23,7 @@ const SearchSuggestions = ({ query }) => {
         <p className="text-white text-sm mb-2 opacity-70">Searching...</p>
       )} */}
 
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-2">
+      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-2">
         {filteredResults.map((item) => {
           return item.media_type === "movie" ? (
             <MovieCard key={`${item.media_type}-${item.id}`} movie={item} />

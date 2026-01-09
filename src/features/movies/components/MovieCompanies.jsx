@@ -49,7 +49,7 @@ const MovieCompanies = () => {
           aspect-video
           rounded-lg
           flex items-center justify-center
-          p-4 lg:p-6
+          p-3 lg:p-6
           hover:opacity-80
           transition-opacity
         "
@@ -57,7 +57,7 @@ const MovieCompanies = () => {
         <img
           src={`https://image.tmdb.org/t/p/w200${c.logo_path}`}
           alt={c.name}
-          className="max-w-[80px] 
+          className="max-w-[60px] 
     lg:max-w-[90px]
     max-h-[40px]
     lg:max-h-[60px]
